@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#08090b">
+<meta name="description" content="Prometheus Server prototype — a learning dashboard for planning and understanding web infrastructure.">
+<title>Prometheus Server — Control Center</title>
+<style>
+:root{color-scheme:dark;--bg:#08090b;--panel:#111318;--panel2:#171a20;--gold:#e9b65a;--gold2:#ffe2a0;--text:#f7f4ed;--muted:#a9adb7;--line:#ffffff1b;--green:#8bd5a3}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 85% 0,#38270f55,transparent 38%),var(--bg);color:var(--text);font:15px/1.6 Inter,system-ui,-apple-system,"Segoe UI",sans-serif}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}.wrap{width:min(1120px,calc(100% - 36px));margin:auto}.topbar{border-bottom:1px solid var(--line);background:#08090bdc}.nav{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:15px}.brand{display:flex;align-items:center;gap:11px;font-size:12px;font-weight:800;letter-spacing:.15em}.mark{width:35px;color:var(--gold)}.back{color:var(--muted);font-size:13px}.back:hover{color:var(--gold2)}main{padding:46px 0 70px}.eyebrow{font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}h1{font-size:clamp(34px,6vw,58px);line-height:1.05;letter-spacing:-.05em;margin:12px 0}h1 span{color:var(--gold)}.intro{max-width:690px;color:var(--muted);margin-bottom:24px}.notice{display:flex;align-items:flex-start;gap:12px;padding:15px 17px;border:1px solid #e9b65a55;background:#e9b65a0b;border-radius:8px;margin:25px 0 28px;color:#e6d7b9;font-size:13px}.notice strong{color:var(--gold2)}.notice-icon{color:var(--gold);font-size:20px}.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin:25px 0}.stat,.panel,.task{border:1px solid var(--line);border-radius:10px;background:linear-gradient(145deg,#ffffff08,#ffffff02)}.stat{padding:19px}.stat-label{font-size:11px;color:var(--muted)}.stat-value{font-size:24px;font-weight:750;letter-spacing:-.03em;margin-top:5px}.stat-sub{font-size:11px;color:#858b96;margin-top:3px}.layout{display:grid;grid-template-columns:1.15fr .85fr;gap:16px}.panel{padding:22px}.panel h2{font-size:18px;margin:0 0 5px}.sub{font-size:12px;color:var(--muted);margin:0 0 20px}.task-list{display:grid;gap:10px}.task{padding:13px;display:flex;gap:12px;align-items:flex-start}.task input{accent-color:var(--gold);width:17px;height:17px;margin-top:4px;flex-shrink:0}.task strong{display:block;font-size:13px}.task small{display:block;color:var(--muted);font-size:12px;margin-top:3px}.task.done strong{text-decoration:line-through;color:#9096a0}.progress-head{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin:18px 0 8px}.track{height:6px;background:#ffffff12;border-radius:99px;overflow:hidden}.bar{height:100%;width:0;background:linear-gradient(90deg,#bd812e,var(--gold2));transition:width .2s}.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:18px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 13px;border-radius:6px;border:1px solid var(--line);font-size:12px;font-weight:750;background:transparent;color:var(--text)}.btn.primary{background:var(--gold);color:#171109;border-color:var(--gold)}.btn:hover{border-color:var(--gold)}.architecture{display:grid;gap:10px}.layer{padding:13px;border-radius:7px;background:var(--panel2);border:1px solid var(--line)}.layer strong{display:block;font-size:13px}.layer span{display:block;color:var(--muted);font-size:12px}.layer-arrow{text-align:center;color:var(--gold);line-height:1}.pill{display:inline-flex;padding:4px 8px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:10px;margin-top:10px}.footer{border-top:1px solid var(--line);padding:22px 0 30px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:#858b96;font-size:11px}
+@media(max-width:760px){.layout{grid-template-columns:1fr}.stats{grid-template-columns:1fr}.stat{padding:15px}.stat-value{font-size:22px}.nav{min-height:66px}.brand{font-size:10px;letter-spacing:.1em}main{padding-top:34px}.panel{padding:18px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap nav">
+<a class="brand" href="../index.html"><svg class="mark" viewBox="0 0 100 100" aria-hidden="true"><path d="M53 7C58 27 42 30 45 46c-7-5-10-12-9-20C20 42 18 57 25 72c7 16 24 23 40 16 18-10 22-29 10-47 1 15-6 20-12 22 4-20-4-39-10-56Z" fill="currentColor"/></svg><span>PROMETHEUS SERVER</span></a>
+<a class="back" href="../index.html">← Company home</a>
+</div></header>
+<main class="wrap">
+<div class="eyebrow">Infrastructure learning · Prototype 01</div>
+<h1>Server <span>Control Center.</span></h1>
+<p class="intro">A first step toward understanding web infrastructure. Use this dashboard to track setup tasks, explore the basic architecture, and prepare for a real server deployment.</p>
+<div class="notice"><div class="notice-icon" aria-hidden="true">ⓘ</div><div><strong>Prototype mode.</strong> This is a static learning dashboard hosted with the website. It does not provision a server, host other websites, monitor real uptime, or run a backend yet. Checklist progress is saved only in this browser.</div></div>
+<div class="stats">
+<div class="stat"><div class="stat-label">PROJECT STAGE</div><div class="stat-value">01 / Foundations</div><div class="stat-sub">Learn before exposing services</div></div>
+<div class="stat"><div class="stat-label">SETUP CHECKLIST</div><div class="stat-value" id="progress-count">0 / 5</div><div class="stat-sub">Tasks completed on this device</div></div>
+<div class="stat"><div class="stat-label">SERVICE STATUS</div><div class="stat-value">Not deployed</div><div class="stat-sub">No backend server connected</div></div>
+</div>
+<div class="layout">
+<section class="panel">
+<h2>First deployment checklist</h2><p class="sub">Complete these in order. Your progress stays in this browser.</p>
+<div class="task-list" id="tasks">
+<label class="task"><input type="checkbox" data-task="0"><span><strong>Understand static vs. backend hosting</strong><small>Learn what GitHub Pages can and cannot run.</small></span></label>
+<label class="task"><input type="checkbox" data-task="1"><span><strong>Choose a free backend platform</strong><small>Compare free tiers, sleep limits, and usage policies.</small></span></label>
+<label class="task"><input type="checkbox" data-task="2"><span><strong>Create a minimal web service</strong><small>Start with a harmless health-check endpoint.</small></span></label>
+<label class="task"><input type="checkbox" data-task="3"><span><strong>Deploy and test HTTPS</strong><small>Verify the public endpoint and expected response.</small></span></label>
+<label class="task"><input type="checkbox" data-task="4"><span><strong>Document security and limits</strong><small>Record secrets handling, logs, backups and service limits.</small></span></label>
+</div>
+<div class="progress-head"><span>Foundation progress</span><strong id="progress-percent">0%</strong></div><div class="track" role="progressbar" aria-label="Checklist progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress-track"><div class="bar" id="progress-bar"></div></div>
+<div class="actions"><button class="btn primary" id="save-button" type="button">Save checklist</button><button class="btn" id="reset-button" type="button">Reset progress</button></div>
+<p id="save-status" class="sub" aria-live="polite" style="margin:10px 0 0"></p>
+</section>
+<aside class="panel">
+<h2>How a web request works</h2><p class="sub">A simplified map of the system we will build toward.</p>
+<div class="architecture">
+<div class="layer"><strong>01 · Visitor / browser</strong><span>A person opens your website on a phone or computer.</span></div><div class="layer-arrow" aria-hidden="true">↓</div>
+<div class="layer"><strong>02 · DNS + HTTPS</strong><span>Domain lookup and encrypted connection.</span></div><div class="layer-arrow" aria-hidden="true">↓</div>
+<div class="layer"><strong>03 · Web server / application</strong><span>Receives a request and returns a page or API response.</span></div><div class="layer-arrow" aria-hidden="true">↓</div>
+<div class="layer"><strong>04 · Data store (when needed)</strong><span>Stores application data with appropriate access controls.</span></div>
+</div>
+<span class="pill">Conceptual diagram · Not live telemetry</span>
+</aside>
+</div>
+</main>
+<footer class="wrap footer"><span>© <span id="year">2026</span> Prometheus Global Technologies</span><span>Learn carefully. Build reliably.</span><a href="https://github.com/arifroan/prometheus-global">Open source repository ↗</a></footer>
+<script>
+(function(){
+ const boxes=[...document.querySelectorAll("[data-task]")];
+ const key="prometheus-server-checklist-v1";
+ const status=document.getElementById("save-status");
+ function render(){
+  const done=boxes.filter(x=>x.checked).length, pct=Math.round(done/boxes.length*100);
+  document.getElementById("progress-count").textContent=done+" / "+boxes.length;
+  document.getElementById("progress-percent").textContent=pct+"%";
+  document.getElementById("progress-bar").style.width=pct+"%";
+  document.getElementById("progress-track").setAttribute("aria-valuenow",String(pct));
+  boxes.forEach(x=>x.closest(".task").classList.toggle("done",x.checked));
+ }
+ try{const saved=JSON.parse(localStorage.getItem(key)||"[]");boxes.forEach((x,i)=>x.checked===Boolean(saved[i])?null:x.checked=Boolean(saved[i]));}catch(e){}
+ boxes.forEach(x=>x.addEventListener("change",()=>{render();status.textContent="Unsaved changes — tap Save checklist."; }));
+ document.getElementById("save-button").addEventListener("click",()=>{try{localStorage.setItem(key,JSON.stringify(boxes.map(x=>x.checked)));status.textContent="Saved on this device."; }catch(e){status.textContent="Browser storage is unavailable; progress may not persist."; }});
+ document.getElementById("reset-button").addEventListener("click",()=>{boxes.forEach(x=>x.checked=false);try{localStorage.removeItem(key);}catch(e){}render();status.textContent="Progress reset.";});
+ document.getElementById("year").textContent=new Date().getFullYear();render();
+})();
+</script>
+</body>
+</html>
