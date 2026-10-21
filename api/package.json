@@ -1,0 +1,14 @@
+{
+  "name": "prometheus-server-api",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Minimal backend API and health endpoint for Prometheus Server",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
