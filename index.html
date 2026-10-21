@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="Prometheus Global Technologies — building independent digital infrastructure, search and tools for a more open web.">
+  <title>Prometheus Global Technologies</title>
+  <style>
+    :root{color-scheme:dark;--bg:#090909;--panel:#11110f;--gold:#f0b84b;--gold2:#ffdf91;--text:#f6f2e8;--muted:#aaa69b;--line:#30291c}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% -15%,#3b2911 0,transparent 45%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff12}.brand{display:flex;align-items:center;gap:12px;font-weight:750;letter-spacing:.13em;font-size:13px}.mark{width:35px;height:35px;color:var(--gold)}.navlinks{display:flex;gap:25px;color:var(--muted);font-size:13px}.navlinks a:hover,.textlink:hover{color:var(--gold2)}
+    .hero{min-height:610px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:38px;padding:78px 0 90px}.eyebrow{color:var(--gold);font-size:11px;letter-spacing:.25em;text-transform:uppercase;font-weight:750}.hero h1{font-size:clamp(42px,6.6vw,78px);line-height:1.02;letter-spacing:-.055em;margin:22px 0}.hero h1 span{color:var(--gold)}.lead{color:#c0bbae;max-width:570px;font-size:17px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;justify-content:center;align-items:center;padding:12px 18px;border-radius:5px;font-weight:700;font-size:13px;border:1px solid var(--line)}.primary{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#171006;border-color:transparent}.secondary:hover{border-color:var(--gold)}.sigil{display:flex;align-items:center;justify-content:center;position:relative;min-height:370px}.sigil:before{content:"";position:absolute;width:min(330px,80%);aspect-ratio:1;border:1px solid #d89c3c44;border-radius:50%;box-shadow:0 0 90px #d89c3c12,inset 0 0 70px #d89c3c0b}.sigil svg{width:min(260px,70%);height:auto;filter:drop-shadow(0 0 24px #e5a63228)}.sigil-label{position:absolute;bottom:14px;color:#75664b;font-size:10px;letter-spacing:.32em}
+    .rule{border:0;border-top:1px solid #ffffff12}.section{padding:78px 0}.section-head{max-width:650px;margin-bottom:32px}.section h2{font-size:clamp(29px,4vw,44px);letter-spacing:-.035em;line-height:1.12;margin:12px 0}.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:linear-gradient(150deg,#15130f,#0d0d0c);border:1px solid #ffffff14;border-radius:9px;padding:23px;min-height:190px}.card .ico{color:var(--gold);font-size:23px}.card h3{font-size:17px;margin:15px 0 7px}.card p{color:var(--muted);font-size:13px;margin:0}.mission{display:grid;grid-template-columns:.75fr 1.25fr;gap:45px;align-items:start}.mission blockquote{font-size:clamp(24px,3.5vw,38px);line-height:1.25;letter-spacing:-.03em;margin:0}.mission blockquote span{color:var(--gold)}.status{display:inline-flex;gap:9px;align-items:center;border:1px solid #ffffff17;padding:7px 10px;border-radius:100px;color:var(--muted);font-size:11px}.dot{width:7px;height:7px;border-radius:50%;background:#eab34d}.footer{border-top:1px solid #ffffff12;padding:25px 0 35px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#8c877b;font-size:11px}.footer strong{color:#e7c67e;letter-spacing:.12em}
+    @media(max-width:760px){.navlinks{gap:13px}.navlinks a:nth-child(2){display:none}.hero{grid-template-columns:1fr;padding:65px 0 50px;gap:5px}.sigil{min-height:260px;grid-row:1}.sigil svg{width:190px}.hero-copy{grid-row:2}.grid{grid-template-columns:1fr}.card{min-height:0}.mission{grid-template-columns:1fr;gap:22px}.section{padding:57px 0}.brand{letter-spacing:.08em;font-size:11px}.nav{height:66px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<header class="wrap nav">
+  <a class="brand" href="#top" aria-label="Prometheus home">
+    <svg class="mark" viewBox="0 0 100 100" role="img" aria-label="Prometheus flame mark"><path d="M53 7C58 27 42 30 45 46c-7-5-10-12-9-20C20 42 18 57 25 72c7 16 24 23 40 16 18-10 22-29 10-47 1 15-6 20-12 22 4-20-4-39-10-56Z" fill="currentColor"/><path d="M51 54c-2 9-12 13-9 24 2 7 10 10 16 6 8-6 5-17-7-30Z" fill="#fff0c5"/></svg>
+    <span>PROMETHEUS</span>
+  </a>
+  <nav class="navlinks" aria-label="Main navigation"><a href="#mission">Mission</a><a href="#platforms">Platforms</a><a href="#roadmap">Roadmap</a></nav>
+</header>
+<main id="top">
+  <section class="wrap hero">
+    <div class="hero-copy">
+      <div class="eyebrow">Independent by design</div>
+      <h1>Build beyond<br>the <span>boundaries.</span></h1>
+      <p class="lead">Prometheus Global Technologies is an early-stage initiative exploring a more open, capable and accessible digital future — one useful product and one reliable system at a time.</p>
+      <div class="actions"><a class="btn primary" href="#platforms">Explore our vision <span aria-hidden="true">&nbsp;↗</span></a><a class="btn secondary" href="#mission">Our mission</a></div>
+    </div>
+    <div class="sigil" aria-label="Golden Prometheus flame emblem">
+      <svg viewBox="0 0 240 280" role="img" aria-label="A golden flame symbol"><defs><linearGradient id="flame" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff0bd"/><stop offset=".48" stop-color="#efb444"/><stop offset="1" stop-color="#9a5c15"/></linearGradient></defs><path d="M127 14c12 46-23 54-14 87-16-11-23-27-19-44C56 91 44 127 60 164c13 32 43 52 76 43 43-12 62-54 35-95 3 29-12 39-25 43 9-47-7-91-19-141Z" fill="url(#flame)"/><path d="M119 125c-5 23-29 34-23 59 5 18 23 27 38 16 19-14 12-41-15-75Z" fill="#fff0c9"/><path d="M38 231h164" stroke="#c38a32" stroke-opacity=".65"/><circle cx="120" cy="231" r="3" fill="#f0b84b"/></svg>
+      <div class="sigil-label">KNOWLEDGE · CREATION · INDEPENDENCE</div>
+    </div>
+  </section>
+  <hr class="rule">
+  <section class="wrap section" id="mission">
+    <div class="mission"><div><div class="eyebrow">Our mission</div><h2>Technology should expand what people can do.</h2></div><div><blockquote>“The power to build a <span>brighter tomorrow.</span>”</blockquote><p class="muted">Inspired by the myth of Prometheus and the gift of fire, our ambition is to learn, create and operate technology with growing independence. We start with practical foundations, transparent progress and tools that serve people.</p><span class="status"><span class="dot"></span> Early-stage project · Building the foundations</span></div></div>
+  </section>
+  <hr class="rule">
+  <section class="wrap section" id="platforms">
+    <div class="section-head"><div class="eyebrow">The ecosystem</div><h2>One vision. Built in stages.</h2><p class="muted">A long-term product direction, beginning with the basics. These are planned areas, not claims of currently operating services.</p></div>
+    <div class="grid">
+      <article class="card"><div class="ico" aria-hidden="true">◈</div><h3>Prometheus Server</h3><p>Learn web hosting, deployment, security and the systems that keep websites available.</p></article>
+      <article class="card"><div class="ico" aria-hidden="true">⌘</div><h3>Prometheus Cloud</h3><p>A future direction for developer-friendly hosting and application infrastructure.</p></article>
+      <article class="card"><div class="ico" aria-hidden="true">⌕</div><h3>Prometheus Search</h3><p>Explore ways to discover and organize publicly accessible information across the web.</p></article>
+      <article class="card"><div class="ico" aria-hidden="true">⌁</div><h3>Prometheus Network</h3><p>Study networking, DNS and resilient connectivity as the technical foundation grows.</p></article>
+      <article class="card"><div class="ico" aria-hidden="true">✳</div><h3>Prometheus AI</h3><p>Investigate useful AI capabilities with attention to transparency and responsible design.</p></article>
+      <article class="card"><div class="ico" aria-hidden="true">⛨</div><h3>Prometheus Security</h3><p>Build secure defaults, privacy awareness, backups and operational discipline into every stage.</p></article>
+    </div>
+  </section>
+  <hr class="rule">
+  <section class="wrap section" id="roadmap">
+    <div class="section-head"><div class="eyebrow">The first milestone</div><h2>Start small. Build for the long term.</h2><p class="muted">Our first practical goal is to publish this website, keep its source code openly versioned, and learn how to deploy and maintain a real web service. Progress will be measured by working systems, not promises.</p><div class="actions"><a class="btn primary" href="https://github.com/arifroan/prometheus-global">View source repository ↗</a><a class="btn secondary" href="https://github.com/arifroan/prometheus-global/issues">Follow development</a></div></div>
+  </section>
+</main>
+<footer class="wrap footer"><div><strong>PROMETHEUS</strong><div>Global Technologies</div></div><div>Independent ambition. Practical engineering.</div><div>© <span id="year">2026</span> Prometheus Global Technologies</div></footer>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
