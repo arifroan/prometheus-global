@@ -3,61 +3,225 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#090909">
-  <meta name="description" content="Prometheus Global Technologies — building independent digital infrastructure, search and tools for a more open web.">
-  <title>Prometheus Global Technologies</title>
+  <meta name="theme-color" content="#08090b">
+  <meta name="description" content="Prometheus Global Technologies is an early-stage initiative exploring open, accessible digital infrastructure and useful internet tools.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Prometheus Global Technologies — Build Beyond Boundaries">
+  <meta property="og:description" content="Independent ambition. Practical engineering. The power to build a brighter tomorrow.">
+  <meta name="color-scheme" content="dark">
+  <title>Prometheus Global Technologies — Build Beyond Boundaries</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2308090b'/%3E%3Cpath d='M53 7C58 27 42 30 45 46c-7-5-10-12-9-20C20 42 18 57 25 72c7 16 24 23 40 16 18-10 22-29 10-47 1 15-6 20-12 22 4-20-4-39-10-56Z' fill='%23e9b65a'/%3E%3C/svg%3E">
   <style>
-    :root{color-scheme:dark;--bg:#090909;--panel:#11110f;--gold:#f0b84b;--gold2:#ffdf91;--text:#f6f2e8;--muted:#aaa69b;--line:#30291c}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% -15%,#3b2911 0,transparent 45%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
-    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff12}.brand{display:flex;align-items:center;gap:12px;font-weight:750;letter-spacing:.13em;font-size:13px}.mark{width:35px;height:35px;color:var(--gold)}.navlinks{display:flex;gap:25px;color:var(--muted);font-size:13px}.navlinks a:hover,.textlink:hover{color:var(--gold2)}
-    .hero{min-height:610px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:38px;padding:78px 0 90px}.eyebrow{color:var(--gold);font-size:11px;letter-spacing:.25em;text-transform:uppercase;font-weight:750}.hero h1{font-size:clamp(42px,6.6vw,78px);line-height:1.02;letter-spacing:-.055em;margin:22px 0}.hero h1 span{color:var(--gold)}.lead{color:#c0bbae;max-width:570px;font-size:17px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;justify-content:center;align-items:center;padding:12px 18px;border-radius:5px;font-weight:700;font-size:13px;border:1px solid var(--line)}.primary{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#171006;border-color:transparent}.secondary:hover{border-color:var(--gold)}.sigil{display:flex;align-items:center;justify-content:center;position:relative;min-height:370px}.sigil:before{content:"";position:absolute;width:min(330px,80%);aspect-ratio:1;border:1px solid #d89c3c44;border-radius:50%;box-shadow:0 0 90px #d89c3c12,inset 0 0 70px #d89c3c0b}.sigil svg{width:min(260px,70%);height:auto;filter:drop-shadow(0 0 24px #e5a63228)}.sigil-label{position:absolute;bottom:14px;color:#75664b;font-size:10px;letter-spacing:.32em}
-    .rule{border:0;border-top:1px solid #ffffff12}.section{padding:78px 0}.section-head{max-width:650px;margin-bottom:32px}.section h2{font-size:clamp(29px,4vw,44px);letter-spacing:-.035em;line-height:1.12;margin:12px 0}.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:linear-gradient(150deg,#15130f,#0d0d0c);border:1px solid #ffffff14;border-radius:9px;padding:23px;min-height:190px}.card .ico{color:var(--gold);font-size:23px}.card h3{font-size:17px;margin:15px 0 7px}.card p{color:var(--muted);font-size:13px;margin:0}.mission{display:grid;grid-template-columns:.75fr 1.25fr;gap:45px;align-items:start}.mission blockquote{font-size:clamp(24px,3.5vw,38px);line-height:1.25;letter-spacing:-.03em;margin:0}.mission blockquote span{color:var(--gold)}.status{display:inline-flex;gap:9px;align-items:center;border:1px solid #ffffff17;padding:7px 10px;border-radius:100px;color:var(--muted);font-size:11px}.dot{width:7px;height:7px;border-radius:50%;background:#eab34d}.footer{border-top:1px solid #ffffff12;padding:25px 0 35px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#8c877b;font-size:11px}.footer strong{color:#e7c67e;letter-spacing:.12em}
-    @media(max-width:760px){.navlinks{gap:13px}.navlinks a:nth-child(2){display:none}.hero{grid-template-columns:1fr;padding:65px 0 50px;gap:5px}.sigil{min-height:260px;grid-row:1}.sigil svg{width:190px}.hero-copy{grid-row:2}.grid{grid-template-columns:1fr}.card{min-height:0}.mission{grid-template-columns:1fr;gap:22px}.section{padding:57px 0}.brand{letter-spacing:.08em;font-size:11px}.nav{height:66px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    :root {
+      color-scheme: dark;
+      --bg: #08090b;
+      --surface: #101216;
+      --surface-raised: #15171c;
+      --gold: #e9b65a;
+      --gold-light: #ffe2a0;
+      --ink: #f7f4ed;
+      --muted: #aaaeb8;
+      --line: rgba(255,255,255,.11);
+      --max: 1160px;
+    }
+    *,*::before,*::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body {
+      margin: 0; background: var(--bg); color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65; -webkit-font-smoothing: antialiased;
+    }
+    body::before {
+      content: ""; position: absolute; inset: 0 0 auto; height: 720px; z-index: -1; pointer-events: none;
+      background: radial-gradient(ellipse at 78% 10%, rgba(176,119,37,.15), transparent 38%),
+                  radial-gradient(ellipse at 15% 25%, rgba(80,91,121,.10), transparent 40%);
+    }
+    a { color: inherit; text-decoration: none; }
+    a:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 4px; border-radius: 4px; }
+    .wrap { width: min(var(--max), calc(100% - 48px)); margin-inline: auto; }
+    .site-header { position: sticky; top: 0; z-index: 10; border-bottom: 1px solid var(--line); background: rgba(8,9,11,.84); backdrop-filter: blur(18px); }
+    .nav { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; flex-shrink: 0; }
+    .brand-mark { width: 38px; height: 38px; color: var(--gold); }
+    .brand-name { display: block; font-size: 12px; line-height: 1.3; font-weight: 800; letter-spacing: .18em; }
+    .brand-sub { display: block; margin-top: 4px; color: var(--muted); font-size: 10px; letter-spacing: .08em; }
+    .navlinks { display: flex; align-items: center; gap: clamp(16px,2.6vw,32px); color: var(--muted); font-size: 13px; }
+    .navlinks a { transition: color .2s ease; }
+    .navlinks a:hover { color: var(--gold-light); }
+    .navlinks .nav-cta { color: var(--ink); border: 1px solid var(--line); border-radius: 6px; padding: 9px 13px; }
+    .navlinks .nav-cta:hover { border-color: var(--gold); color: var(--gold-light); }
+    .hero { min-height: 660px; display: grid; grid-template-columns: 1.08fr .92fr; align-items: center; gap: 46px; padding-block: 78px 90px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 10px; color: var(--gold); font-size: 11px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; display: inline-block; width: 24px; height: 1px; background: currentColor; }
+    h1,h2,h3,p { margin-top: 0; }
+    .hero h1 { max-width: 720px; margin: 23px 0; font-size: clamp(46px,6.5vw,82px); line-height: .99; letter-spacing: -.065em; font-weight: 760; }
+    .hero h1 span { color: var(--gold); }
+    .lead { max-width: 590px; color: #c2c4ca; font-size: clamp(16px,1.7vw,18px); line-height: 1.8; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .btn { min-height: 46px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 12px 17px; border: 1px solid var(--line); border-radius: 6px; font-size: 13px; font-weight: 750; transition: transform .2s ease, border-color .2s ease, background .2s ease; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { color: #171109; border-color: transparent; background: linear-gradient(130deg,var(--gold-light),var(--gold)); }
+    .btn-primary:hover { background: #ffdf9b; }
+    .btn-secondary:hover { border-color: rgba(233,182,90,.7); }
+    .trustline { display: flex; align-items: center; gap: 10px; margin-top: 26px; color: #8e929c; font-size: 11px; }
+    .trustline .pulse { width: 7px; height: 7px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 4px rgba(233,182,90,.10); }
+    .emblem { position: relative; min-height: 410px; display: grid; place-items: center; isolation: isolate; }
+    .emblem::before,.emblem::after { content: ""; position: absolute; aspect-ratio: 1; border: 1px solid rgba(233,182,90,.19); border-radius: 50%; }
+    .emblem::before { width: min(370px,94%); box-shadow: 0 0 100px rgba(201,140,48,.08), inset 0 0 75px rgba(201,140,48,.04); }
+    .emblem::after { width: min(290px,74%); border-style: dashed; border-color: rgba(233,182,90,.13); }
+    .emblem-art { position: relative; width: min(245px,62%); height: auto; filter: drop-shadow(0 0 30px rgba(233,182,90,.19)); }
+    .emblem-caption { position: absolute; bottom: 10px; color: #8e7954; font-size: 9px; letter-spacing: .25em; text-align: center; }
+    .section { padding-block: 88px; }
+    .section-divider { border: 0; border-top: 1px solid var(--line); }
+    .section-head { max-width: 680px; margin-bottom: 34px; }
+    .section h2 { margin: 14px 0 16px; font-size: clamp(32px,4.5vw,50px); line-height: 1.1; letter-spacing: -.045em; }
+    .muted { color: var(--muted); }
+    .section-intro { max-width: 640px; margin-bottom: 0; color: var(--muted); }
+    .mission-grid { display: grid; grid-template-columns: .82fr 1.18fr; gap: 64px; align-items: start; }
+    .mission-quote { margin: 0 0 22px; font-size: clamp(25px,3.5vw,40px); line-height: 1.22; letter-spacing: -.04em; }
+    .mission-quote span { color: var(--gold); }
+    .status { display: inline-flex; align-items: center; gap: 9px; margin-top: 12px; padding: 7px 11px; border: 1px solid var(--line); border-radius: 999px; color: #c0b7a6; font-size: 11px; }
+    .status-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--gold); }
+    .product-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 15px; }
+    .product-card { position: relative; min-height: 205px; overflow: hidden; padding: 24px; border: 1px solid var(--line); border-radius: 10px; background: linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.012)); transition: transform .22s ease,border-color .22s ease,background .22s ease; }
+    .product-card:hover { transform: translateY(-4px); border-color: rgba(233,182,90,.38); background: linear-gradient(145deg,rgba(233,182,90,.08),rgba(255,255,255,.012)); }
+    .product-icon { display: grid; place-items: center; width: 42px; height: 42px; border: 1px solid rgba(233,182,90,.25); border-radius: 9px; color: var(--gold); background: rgba(233,182,90,.06); }
+    .product-icon svg { width: 21px; height: 21px; }
+    .product-card h3 { margin: 18px 0 7px; font-size: 16px; letter-spacing: -.01em; }
+    .product-card p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.7; }
+    .planned-label { display: inline-block; margin-top: 15px; color: #bca06e; font-size: 9px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+    .roadmap-panel { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 30px; padding: clamp(25px,4.5vw,48px); border: 1px solid rgba(233,182,90,.23); border-radius: 12px; background: radial-gradient(ellipse at 100% 0%,rgba(233,182,90,.10),transparent 42%),var(--surface); }
+    .roadmap-panel h2 { max-width: 620px; }
+    .roadmap-panel p { max-width: 680px; margin-bottom: 0; color: var(--muted); }
+    .roadmap-actions { min-width: 180px; display: flex; flex-direction: column; gap: 10px; }
+    .roadmap-actions .btn { width: 100%; }
+    .footer { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 22px; padding-block: 28px 34px; border-top: 1px solid var(--line); color: #9296a0; font-size: 11px; }
+    .footer-brand { color: var(--gold-light); font-weight: 800; letter-spacing: .15em; }
+    .footer p { margin: 4px 0 0; }
+    @media (max-width: 900px) {
+      .hero { min-height: 0; gap: 20px; padding-block: 70px; }
+      .emblem { min-height: 330px; }
+      .product-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+      .mission-grid { gap: 35px; }
+      .roadmap-panel { grid-template-columns: 1fr; }
+      .roadmap-actions { min-width: 0; flex-direction: row; flex-wrap: wrap; }
+      .roadmap-actions .btn { width: auto; }
+    }
+    @media (max-width: 620px) {
+      .wrap { width: min(var(--max),calc(100% - 34px)); }
+      .nav { min-height: 70px; gap: 12px; }
+      .brand { gap: 9px; }
+      .brand-mark { width: 34px; height: 34px; }
+      .brand-name { font-size: 10px; letter-spacing: .13em; }
+      .brand-sub { font-size: 9px; }
+      .navlinks { gap: 14px; font-size: 12px; }
+      .navlinks a[data-hide-mobile] { display: none; }
+      .navlinks .nav-cta { padding: 8px 10px; }
+      .hero { grid-template-columns: 1fr; padding-block: 42px 52px; gap: 0; }
+      .emblem { grid-row: 1; min-height: 245px; margin-bottom: 18px; }
+      .emblem::before { width: 230px; }
+      .emblem::after { width: 182px; }
+      .emblem-art { width: 155px; }
+      .emblem-caption { bottom: 0; font-size: 8px; letter-spacing: .17em; }
+      .hero-copy { grid-row: 2; }
+      .hero h1 { margin: 18px 0; font-size: clamp(45px,12vw,66px); }
+      .lead { font-size: 15px; }
+      .actions .btn { flex: 1 1 auto; }
+      .section { padding-block: 60px; }
+      .mission-grid { grid-template-columns: 1fr; gap: 18px; }
+      .product-grid { grid-template-columns: 1fr; gap: 11px; }
+      .product-card { min-height: 0; padding: 21px; }
+      .product-card h3 { margin-top: 14px; }
+      .roadmap-panel { padding: 24px 20px; }
+      .roadmap-actions { flex-direction: column; }
+      .roadmap-actions .btn { width: 100%; }
+      .footer { align-items: flex-start; flex-direction: column; gap: 14px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *,*::before,*::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+    }
   </style>
 </head>
 <body>
-<header class="wrap nav">
-  <a class="brand" href="#top" aria-label="Prometheus home">
-    <svg class="mark" viewBox="0 0 100 100" role="img" aria-label="Prometheus flame mark"><path d="M53 7C58 27 42 30 45 46c-7-5-10-12-9-20C20 42 18 57 25 72c7 16 24 23 40 16 18-10 22-29 10-47 1 15-6 20-12 22 4-20-4-39-10-56Z" fill="currentColor"/><path d="M51 54c-2 9-12 13-9 24 2 7 10 10 16 6 8-6 5-17-7-30Z" fill="#fff0c5"/></svg>
-    <span>PROMETHEUS</span>
-  </a>
-  <nav class="navlinks" aria-label="Main navigation"><a href="#mission">Mission</a><a href="#platforms">Platforms</a><a href="#roadmap">Roadmap</a></nav>
-</header>
-<main id="top">
-  <section class="wrap hero">
-    <div class="hero-copy">
-      <div class="eyebrow">Independent by design</div>
-      <h1>Build beyond<br>the <span>boundaries.</span></h1>
-      <p class="lead">Prometheus Global Technologies is an early-stage initiative exploring a more open, capable and accessible digital future — one useful product and one reliable system at a time.</p>
-      <div class="actions"><a class="btn primary" href="#platforms">Explore our vision <span aria-hidden="true">&nbsp;↗</span></a><a class="btn secondary" href="#mission">Our mission</a></div>
+  <a href="#main" class="skip-link" style="position:absolute;left:-9999px;top:auto">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="Prometheus Global Technologies home">
+        <svg class="brand-mark" viewBox="0 0 100 100" role="img" aria-label="Prometheus flame emblem"><path d="M53 7C58 27 42 30 45 46c-7-5-10-12-9-20C20 42 18 57 25 72c7 16 24 23 40 16 18-10 22-29 10-47 1 15-6 20-12 22 4-20-4-39-10-56Z" fill="currentColor"/><path d="M51 54c-2 9-12 13-9 24 2 7 10 10 16 6 8-6 5-17-7-30Z" fill="#fff0c5"/></svg>
+        <span><span class="brand-name">PROMETHEUS</span><span class="brand-sub">GLOBAL TECHNOLOGIES</span></span>
+      </a>
+      <nav class="navlinks" aria-label="Main navigation">
+        <a href="#mission" data-hide-mobile>Mission</a>
+        <a href="#platforms">Platforms</a>
+        <a href="#roadmap" data-hide-mobile>Roadmap</a>
+        <a class="nav-cta" href="https://github.com/arifroan/prometheus-global" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      </nav>
     </div>
-    <div class="sigil" aria-label="Golden Prometheus flame emblem">
-      <svg viewBox="0 0 240 280" role="img" aria-label="A golden flame symbol"><defs><linearGradient id="flame" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff0bd"/><stop offset=".48" stop-color="#efb444"/><stop offset="1" stop-color="#9a5c15"/></linearGradient></defs><path d="M127 14c12 46-23 54-14 87-16-11-23-27-19-44C56 91 44 127 60 164c13 32 43 52 76 43 43-12 62-54 35-95 3 29-12 39-25 43 9-47-7-91-19-141Z" fill="url(#flame)"/><path d="M119 125c-5 23-29 34-23 59 5 18 23 27 38 16 19-14 12-41-15-75Z" fill="#fff0c9"/><path d="M38 231h164" stroke="#c38a32" stroke-opacity=".65"/><circle cx="120" cy="231" r="3" fill="#f0b84b"/></svg>
-      <div class="sigil-label">KNOWLEDGE · CREATION · INDEPENDENCE</div>
-    </div>
-  </section>
-  <hr class="rule">
-  <section class="wrap section" id="mission">
-    <div class="mission"><div><div class="eyebrow">Our mission</div><h2>Technology should expand what people can do.</h2></div><div><blockquote>“The power to build a <span>brighter tomorrow.</span>”</blockquote><p class="muted">Inspired by the myth of Prometheus and the gift of fire, our ambition is to learn, create and operate technology with growing independence. We start with practical foundations, transparent progress and tools that serve people.</p><span class="status"><span class="dot"></span> Early-stage project · Building the foundations</span></div></div>
-  </section>
-  <hr class="rule">
-  <section class="wrap section" id="platforms">
-    <div class="section-head"><div class="eyebrow">The ecosystem</div><h2>One vision. Built in stages.</h2><p class="muted">A long-term product direction, beginning with the basics. These are planned areas, not claims of currently operating services.</p></div>
-    <div class="grid">
-      <article class="card"><div class="ico" aria-hidden="true">◈</div><h3>Prometheus Server</h3><p>Learn web hosting, deployment, security and the systems that keep websites available.</p></article>
-      <article class="card"><div class="ico" aria-hidden="true">⌘</div><h3>Prometheus Cloud</h3><p>A future direction for developer-friendly hosting and application infrastructure.</p></article>
-      <article class="card"><div class="ico" aria-hidden="true">⌕</div><h3>Prometheus Search</h3><p>Explore ways to discover and organize publicly accessible information across the web.</p></article>
-      <article class="card"><div class="ico" aria-hidden="true">⌁</div><h3>Prometheus Network</h3><p>Study networking, DNS and resilient connectivity as the technical foundation grows.</p></article>
-      <article class="card"><div class="ico" aria-hidden="true">✳</div><h3>Prometheus AI</h3><p>Investigate useful AI capabilities with attention to transparency and responsible design.</p></article>
-      <article class="card"><div class="ico" aria-hidden="true">⛨</div><h3>Prometheus Security</h3><p>Build secure defaults, privacy awareness, backups and operational discipline into every stage.</p></article>
-    </div>
-  </section>
-  <hr class="rule">
-  <section class="wrap section" id="roadmap">
-    <div class="section-head"><div class="eyebrow">The first milestone</div><h2>Start small. Build for the long term.</h2><p class="muted">Our first practical goal is to publish this website, keep its source code openly versioned, and learn how to deploy and maintain a real web service. Progress will be measured by working systems, not promises.</p><div class="actions"><a class="btn primary" href="https://github.com/arifroan/prometheus-global">View source repository ↗</a><a class="btn secondary" href="https://github.com/arifroan/prometheus-global/issues">Follow development</a></div></div>
-  </section>
-</main>
-<footer class="wrap footer"><div><strong>PROMETHEUS</strong><div>Global Technologies</div></div><div>Independent ambition. Practical engineering.</div><div>© <span id="year">2026</span> Prometheus Global Technologies</div></footer>
-<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  </header>
+  <main id="main">
+    <section class="wrap hero" id="top">
+      <div class="hero-copy">
+        <div class="eyebrow">Independent by design</div>
+        <h1>Build beyond<br>the <span>boundaries.</span></h1>
+        <p class="lead">A technology initiative focused on learning, creating and steadily building toward a more open, capable and accessible digital future.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#platforms">Explore the vision <span aria-hidden="true">↗</span></a>
+          <a class="btn btn-secondary" href="#mission">Our mission</a>
+        </div>
+        <div class="trustline"><span class="pulse" aria-hidden="true"></span> Early-stage initiative · Building the foundations</div>
+      </div>
+      <div class="emblem" aria-label="Golden Prometheus flame emblem">
+        <svg class="emblem-art" viewBox="0 0 240 280" role="img" aria-label="A sculpted golden flame"><defs><linearGradient id="flame" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff0bd"/><stop offset=".48" stop-color="#e9b65a"/><stop offset="1" stop-color="#925b19"/></linearGradient></defs><path d="M127 14c12 46-23 54-14 87-16-11-23-27-19-44C56 91 44 127 60 164c13 32 43 52 76 43 43-12 62-54 35-95 3 29-12 39-25 43 9-47-7-91-19-141Z" fill="url(#flame)"/><path d="M119 125c-5 23-29 34-23 59 5 18 23 27 38 16 19-14 12-41-15-75Z" fill="#fff0c9"/><path d="M38 231h164" stroke="#c38a32" stroke-opacity=".65"/><circle cx="120" cy="231" r="3" fill="#e9b65a"/></svg>
+        <div class="emblem-caption">KNOWLEDGE · CREATION · INDEPENDENCE</div>
+      </div>
+    </section>
+    <hr class="section-divider">
+    <section class="wrap section" id="mission">
+      <div class="mission-grid">
+        <div><div class="eyebrow">Our mission</div><h2>Technology should expand what people can do.</h2></div>
+        <div>
+          <blockquote class="mission-quote">“The power to build a <span>brighter tomorrow.</span>”</blockquote>
+          <p class="muted">Inspired by the myth of Prometheus and the gift of fire, our ambition is to grow technical independence through practical engineering. We begin with small, verifiable steps, open learning and tools designed to serve people.</p>
+          <span class="status"><span class="status-dot" aria-hidden="true"></span> Foundation phase · Progress over promises</span>
+        </div>
+      </div>
+    </section>
+    <hr class="section-divider">
+    <section class="wrap section" id="platforms">
+      <div class="section-head">
+        <div class="eyebrow">The ecosystem</div>
+        <h2>One vision. Built in stages.</h2>
+        <p class="section-intro">A long-term product direction, starting with the fundamentals. Each platform below is planned work—not a claim that a finished service is already operating.</p>
+      </div>
+      <div class="product-grid">
+        <article class="product-card"><div class="product-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="4" width="16" height="6" rx="1.5"/><rect x="4" y="14" width="16" height="6" rx="1.5"/><path d="M7 7h.01M7 17h.01M10 7h7M10 17h7"/></svg></div><h3>Prometheus Server</h3><p>Learn web hosting, deployment and the fundamentals of reliable services.</p><span class="planned-label">Planned direction</span></article>
+        <article class="product-card"><div class="product-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3 20 7.5v9L12 21l-8-4.5v-9L12 3Z"/><path d="m4.5 7.8 7.5 4.4 7.5-4.4M12 12.2V21"/></svg></div><h3>Prometheus Cloud</h3><p>A future direction for portable, developer-friendly application infrastructure.</p><span class="planned-label">Future exploration</span></article>
+        <article class="product-card"><div class="product-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5M8 10.8h5.6M10.8 8v5.6"/></svg></div><h3>Prometheus Search</h3><p>Explore better ways to discover and organize publicly available information.</p><span class="planned-label">Future exploration</span></article>
+        <article class="product-card"><div class="product-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><ellipse cx="12" cy="12" rx="3.5" ry="8.5"/><path d="M3.8 9h16.4M3.8 15h16.4"/></svg></div><h3>Prometheus Network</h3><p>Study networking, DNS and resilient connectivity as the technical base grows.</p><span class="planned-label">Future exploration</span></article>
+        <article class="product-card"><div class="product-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1m0-12.8-2.1 2.1m-8.6 8.6-2.1 2.1"/><circle cx="12" cy="12" r="5"/></svg></div><h3>Prometheus AI</h3><p>Investigate useful AI capabilities with transparent, responsible design.</p><span class="planned-label">Future exploration</span></article>
+        <article class="product-card"><div class="product-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3 20 6v5.5c0 4.7-3.2 7.7-8 9.5-4.8-1.8-8-4.8-8-9.5V6l8-3Z"/><path d="m8.5 12 2.3 2.3 4.8-5"/></svg></div><h3>Prometheus Security</h3><p>Make secure defaults, privacy awareness and backups part of every stage.</p><span class="planned-label">Core principle</span></article>
+      </div>
+    </section>
+    <hr class="section-divider">
+    <section class="wrap section" id="roadmap">
+      <div class="roadmap-panel">
+        <div>
+          <div class="eyebrow">The first milestone</div>
+          <h2>Start small. Build for the long term.</h2>
+          <p>Our first practical goal is to maintain this live website, keep its source versioned, and learn to deploy and operate a real web service. Progress will be measured by working systems—not promises.</p>
+        </div>
+        <div class="roadmap-actions">
+          <a class="btn btn-primary" href="https://github.com/arifroan/prometheus-global" target="_blank" rel="noopener noreferrer">View source code ↗</a>
+          <a class="btn btn-secondary" href="https://github.com/arifroan/prometheus-global/issues" target="_blank" rel="noopener noreferrer">Development issues ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="wrap footer">
+    <div><div class="footer-brand">PROMETHEUS</div><p>Global Technologies</p></div>
+    <div>Independent ambition. Practical engineering.</div>
+    <div>© <span id="year">2026</span> Prometheus Global Technologies</div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
