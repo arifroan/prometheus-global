@@ -1,0 +1,13 @@
+{
+  "name": "prometheus-global",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Prometheus Global Technologies website and Server API",
+  "scripts": {
+    "start": "node api/server.js",
+    "check:api": "node --check api/server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
